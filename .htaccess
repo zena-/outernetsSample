@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.github.io/outernetsSample.com$ [NC]
+RewriteRule ^(.*)$ https://www.github.io/outernetsSample.com/$1 [L,R=301]
