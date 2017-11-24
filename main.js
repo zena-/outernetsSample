@@ -1,21 +1,26 @@
 var img = document.createElement("img");
-img.src = 'img/camera_lens.png';
+img.src = 'img/sk.png';
+
+// var imgg = document.createElement("imgg");
+// imgg.src = 'img/birds.png';
 
 window.onload = function() {
       var video = document.getElementById('video');
       var canvas = document.getElementById('canvas');
       var context = canvas.getContext('2d');
-      var tracker = new tracking.ObjectTracker('eye');
-      tracker.setInitialScale(1);
-      tracker.setStepSize(2.7);
-      tracker.setEdgesDensity(0.2);
+      var tracker = new tracking.ObjectTracker('face');
+      tracker.setInitialScale(4.7);
+      tracker.setStepSize(0.5);
+      tracker.setEdgesDensity(0.1);
       tracking.track('#video', tracker, { camera: true });
       tracker.on('track', function(event) {
         context.clearRect(0, 0, canvas.width, canvas.height);
         event.data.forEach(function(rect) {
 
-        	// set scal and postion  the -10 is because it tend not to sit centered 
-        	context.drawImage(img, rect.x -10, rect.y -10, rect.width * 1.5, rect.height * 2)
+        	// set scale and postion
+        	// context.drawImage(img, rect.x -70, rect.y +50, rect.width * 2.2, rect.height * 1)
+        	context.drawImage(img, rect.x +1, rect.y -28, rect.width * 1.1, rect.height * 1.5)
+        	
 
           // context.strokeStyle = '#a64ceb';
           // context.strokeRect(rect.x, rect.y, rect.width, rect.height);
