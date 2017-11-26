@@ -1,33 +1,60 @@
 video, canvas {
-    margin-left: 230px;
+    /*margin-left: 230px;*/
     /*margin-top: 120px;*/
     position: absolute;
-  }
-
-.wind {
-	padding: 35px;
-
+    z-index: 1;
 }
 
-/*#img:before {
-    position: absolute;
-    background: url(img/birds.png) no-repeat center center fixed;
-    content: '';
-    width: 25%;
-    height: 68%;
-    top: 260px;
-    left: -22%;
-    transform: rotate(162deg);
-    border-left: 1px solid black;
-    box-sizing: border-box;
-}*/
+body{
+    overflow: hidden;
+}
 
-/*#img:after {
+.wrap {
+    perspective: 800px;
+    perspective-origin: 50% 100px;
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    transform-style: preserve-3d;
+    margin-left: 590px;
+}
+ 
+.cube div {
     position: absolute;
-    content: '';
-    height: 74%;
-    top: -46px;
-    left: 96%;
-    border-right: 1px solid black;;
-    transform: rotate(157deg);
-}*/
+    width: 200px;
+    height: 200px;
+    padding: 91px;
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+}
+.left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+}
+.top {
+    transform: rotateX(-90deg) translateY(-100px);
+    transform-origin: top center;
+}
+.bottom {
+    transform: rotateX(90deg) translateY(100px);
+    transform-origin: bottom center;
+}
+.front {
+    transform: translateZ(100px);
+}
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+.cube {
+    animation: spin 9s infinite linear;
+}

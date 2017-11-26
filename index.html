@@ -6,34 +6,70 @@
 	<!-- initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"> -->
 	<meta name="description" content=" ">
 	<title> Outernets Sample </title>
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/responsive.css"> -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="tracking.js-master/examples/assets/demo.css">
-
-	  <script src="tracking.js-master/build/tracking-min.js"></script>
-	  <script src="tracking.js-master/build/data/face-min.js"></script>
-	  <script src="tracking.js-master/build/data/eye-min.js"></script>
-	  <script src="tracking.js-master/build/data/mouth-min.js"></script>
-	   <script src="node_modules/dat.gui/build/dat.gui.min.js"></script>
-	  <script src="tracking.js-master/examples/assets/stats.min.js"></script>
+    <!-- processing and p5 -->
+ 	<link  href="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js">
+	
+    <!-- tracking -->
+	<script src="tracking.js-master/build/tracking-min.js"></script>
+	<script src="tracking.js-master/build/data/face-min.js"></script>
+    <!-- // <script src="tracking.js-master/build/data/eye-min.js"></script> -->
+    <!-- // <script src="tracking.js-master/build/data/mouth-min.js"></script> -->
+    <script src="node_modules/dat.gui/build/dat.gui.min.js"></script>
+    <script src="assets/fish_tank/FishTankRenderer.js"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
 </head>
 <body>
-	<div id="img"></div>
-	<div class="wind">
-	    <div class="frame">
-		    <div class="vcontainer">
-		        <video id="video" width="320" height="240" preload autoplay loop muted></video>
-		        <canvas id="canvas" width="320" height="240"></canvas>
-		    </div>
+    <!-- <div class="frame">
+	    <div class="container" id="viewport">
+	        <video id="video" width="320" height="240" preload autoplay loop muted></video>
+	        <canvas id="canvas" width="320" height="240"></canvas>
 	    </div>
-    </div>
-	
+    </div> -->
+
+    <div class="wrap">
+		<div class="cube">
+			<div class="front">
+				<div class="frame">
+				    <div class="container" id="viewport">
+				        <video id="video" width="320" height="240" preload autoplay loop muted></video>
+				        <canvas id="canvas" width="320" height="240"></canvas>
+				    </div>
+			    </div>
+			</div>
+			<div class="back"><img src="img/birds.png"></div>
+			<div class="top"><img src="img/planets.jpg"></div>
+			<div class="bottom">bottom</div>
+			<div class="left"><img src="img/Mask.png"></div>
+			<div class="right"><img src="img/camera_lens.png"></div>
+		</div>
+	</div>
+
+	 <!-- <a-scene>
+	    <a-camera position='0 0 10' user-height='0'></a-camera>
+	    <a-entity id="rain" particle-system="preset: rain; color: #24CAFF; particleCount: 5000"></a-entity>
+	    <a-assets>
+	    	<img id="reflect" src="https://raw.githubusercontent.com/mrdoob/three.js/r82/examples/textures/2294472375_24a3b8ef46_o.jpg">
+	    </a-assets>
+	    <a-torus-knot material="src:#reflect" position="-3 1 0" color="red" depth="2" height="2.5" width="3">
+	    	<a-animation attribute="rotation" dur="10000" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+		</a-torus-knot>
+		
+	    <a-text value="outernets" geometry="primitive:plane" depth="2" height="50" width="60" color="silver"><a-animation attribute="rotation" dur="10000" from="0 -360 0" to="0 360 0" easing="linear" repeat="indefinite"></a-animation></a-text>
+	    
+	    <a-entity id="ocean" ocean="density: 60; width: 90; depth: 50; speed: 2"
+            material="color: #24CAFF; opacity: 0.75; metalness: 0; roughness: 1"
+            rotation="-90 0 0"></a-entity>
+    </a-scene> -->
+
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="https://threejs.org/build/three.min.js"></script>
 	<script src="main.js"></script>
 	<script type="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
