@@ -9,6 +9,11 @@ body{
     overflow: hidden;
 }
 
+#ground {
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    /*-webkit-animation: hue 10s infinite linear;*/
+}
+
 .wrap {
     perspective: 800px;
     perspective-origin: 50% 100px;
@@ -18,14 +23,15 @@ body{
     position: relative;
     width: 200px;
     transform-style: preserve-3d;
-    margin-left: 590px;
+    margin-left: 1090px;
 }
  
 .cube div {
     position: absolute;
-    width: 200px;
+    width: 0px;
     height: 200px;
-    padding: 91px;
+    padding: 71px;
+    margin-top: 23px;
 }
 
 .back {

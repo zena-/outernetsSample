@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background: floralwhite;">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"> -->
 	<meta name="description" content=" ">
 	<title> Outernets Sample </title>
 	<link rel="stylesheet" href="style.css">
-
-    <!-- processing and p5 -->
- 	<link  href="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js">
 	
-    <!-- tracking -->
 	<script src="tracking.js-master/build/tracking-min.js"></script>
 	<script src="tracking.js-master/build/data/face-min.js"></script>
-    <!-- // <script src="tracking.js-master/build/data/eye-min.js"></script> -->
-    <!-- // <script src="tracking.js-master/build/data/mouth-min.js"></script> -->
     <script src="node_modules/dat.gui/build/dat.gui.min.js"></script>
-    <script src="assets/fish_tank/FishTankRenderer.js"></script>
+
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
@@ -25,28 +18,31 @@
     <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
 </head>
 <body>
-    <!-- <div class="frame">
+    <div class="frame">
 	    <div class="container" id="viewport">
 	        <video id="video" width="320" height="240" preload autoplay loop muted></video>
 	        <canvas id="canvas" width="320" height="240"></canvas>
 	    </div>
-    </div> -->
+    </div>
 
     <div class="wrap">
 		<div class="cube">
-			<div class="front">
-				<div class="frame">
-				    <div class="container" id="viewport">
-				        <video id="video" width="320" height="240" preload autoplay loop muted></video>
-				        <canvas id="canvas" width="320" height="240"></canvas>
-				    </div>
-			    </div>
+			<div class="front"><img src="img/birds.png">
 			</div>
 			<div class="back"><img src="img/birds.png"></div>
-			<div class="top"><img src="img/planets.jpg"></div>
-			<div class="bottom">bottom</div>
-			<div class="left"><img src="img/Mask.png"></div>
-			<div class="right"><img src="img/camera_lens.png"></div>
+			<div class="top"><img src="img/birds.png"></div>
+			<div class="left"><img src="img/birds.png"></div>
+			<div class="right"><img src="img/birds.png"></div>
+		</div>
+	</div>
+
+	<div class="wrap">
+		<div class="cube" style="margin-left: 650px;">
+			<div class="front"><img src="img/birds.png"></div>
+			<div class="back"><img src="img/birds.png"></div>
+			<div class="top"><img src="img/birds.png"></div>
+			<div class="left"><img src="img/birds.png"></div>
+			<div class="right"><img src="img/birds.png"></div>
 		</div>
 	</div>
 
@@ -69,7 +65,6 @@
 
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-	<script src="https://threejs.org/build/three.min.js"></script>
 	<script src="main.js"></script>
 	<script type="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
